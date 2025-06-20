@@ -8,7 +8,8 @@ This is my first ever web portfolio – a simple, password-protected site built 
 
 ## 🔐 Password to Access
 
-To explore the full website, enter the password when asked:
+To explore the full website, enter the password when asked:[https://ashadhy.github.io/diff.html]
+
 
 =================================================================================================================
 
