@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aashish Adhy's Portfolio (Class 10)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* Password Screen Styling */
+    #password-screen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background-color: #ffffff;
+    }
+
+    #password-screen input {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #password-screen button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4dabf7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #password-error {
+      color: red;
+      display: none;
+      margin-top: 10px;
+    }
+
+    /* Portfolio Content */
+    #portfolio-content {
+      display: none;
+      margin: 20px;
+    }
+
+    header {
+      background-color: #4dabf7;
+      padding: 20px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    section {
+      margin: 20px 0;
+      padding: 15px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #4dabf7;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      font-size: 1.1em;
+      margin: 5px 0;
+    }
+
+    footer {
+      background-color: #4dabf7;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Password Screen -->
+  <div id="password-screen">
+    <h2>Please enter the password to view my portfolio:</h2>
+    <input type="password" id="password-input" />
+    <button onclick="checkPassword()">Submit</button>
+    <p id="password-error">Incorrect password. Please try again.</p>
+  </div>
+
+  <!-- Portfolio Content (Initially hidden) -->
+  <div id="portfolio-content">
+    <header>
+      <h1>Aashish Adhy's Portfolio</h1>
+      <p>Created by a **Class 10 Student**</p>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm **Aashish Adhy**, a **Class 10 student** from India. 
+        I'm passionate about technology, coding, and the universe. This portfolio is a glimpse of my skills, hobbies, and education.
+      </p>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="hobbies">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>🎮 Playing video games</li>
+        <li>📖 Reading about space and technology</li>
+        <li>💻 Coding and learning new programming languages</li>
+      </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Currently studying in **Class 10** under the **CBSE** curriculum</li>
+        <li>Subjects: **Mathematics**, **Science**, **Computer Science**</li>
+        <li>Learning web development: **HTML**, **CSS**, **JavaScript**</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with ❤️ by Aashish Adhy | Class 10 Student</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript to handle password validation -->
+  <script>
+    function checkPassword() {
+      const enteredPassword = document.getElementById("password-input").value;
+      const correctPassword = "summer";
+      
+      if (enteredPassword === correctPassword) {
+        document.getElementById("password-screen").style.display = "none";
+        document.getElementById("portfolio-content").style.display = "block";
+      } else {
+        document.getElementById("password-error").style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
